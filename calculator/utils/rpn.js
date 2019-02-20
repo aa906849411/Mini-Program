@@ -75,13 +75,13 @@ function calRpnExp(rpnArr) {
       var num1 = stack.pop();
       var num2 = stack.pop();
       if (rpnArr[i] == '-') {
-        var num = (num2 - num1).toFixed(1);
+        var num = num2 - num1;
       } else if (rpnArr[i] == '+') {
         var num = num2 + num1;
       } else if (rpnArr[i] == '*' || rpnArr[i] == 'x') {
-        var num = (num2 * num1).toFixed(2);
+        var num = num2 * num1;
       } else  if (rpnArr[i] == '/' || rpnArr[i] == '÷') {
-        var num = (num2 / num1).toFixed(2);
+        var num = num2 / num1;
       } if (rpnArr[i] == '%' ) {
         var num = parseFloat(num1 / 100);
       }
